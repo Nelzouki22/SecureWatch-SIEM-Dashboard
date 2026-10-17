@@ -1,0 +1,96 @@
+securewatch-siem/
+│
+├── app.py
+├── auth.py
+├── config.py
+├── database.py
+├── models.py
+├── siem_engine.py
+├── brute_force_detector.py
+├── alert_engine.py
+├── incident_manager.py
+├── report_generator.py
+├── audit_logger.py
+├── password_generator.py
+├── i18n.py
+├── routes_dashboard.py
+├── routes_events.py
+├── routes_alerts.py
+├── routes_incidents.py
+├── routes_reports.py
+├── routes_settings.py
+│
+├── templates/
+│   ├── base.html
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── events.html
+│   ├── ingest.html
+│   ├── alerts.html
+│   ├── incidents.html
+│   ├── incident_form.html
+│   ├── incident_detail.html
+│   ├── reports.html
+│   ├── settings.html
+│   ├── audit_logs.html
+│   └── error.html
+│
+├── static/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── dark.css
+│   └── js/
+│       ├── charts.js
+│       ├── dashboard.js
+│       ├── darkmode.js
+│       └── translations.js
+│
+├── translations/
+│   ├── en.json
+│   └── ar.json
+│
+├── logs/
+│   ├── windows_security_logs.json
+│   ├── linux_logs.json
+│   ├── firewall_logs.json
+│   ├── active_directory_logs.json
+│   ├── sample_logs.json
+│   └── audit.log
+│
+├── incidents/
+│   └── sample_incidents.json
+│
+├── database/
+│   └── siem.db
+│
+├── reports/
+│   ├── securewatch_daily.pdf
+│   ├── securewatch_daily.csv
+│   ├── securewatch_weekly.pdf
+│   ├── securewatch_weekly.csv
+│   ├── securewatch_monthly.pdf
+│   └── securewatch_monthly.csv
+│
+├── tests/
+│   ├── conftest.py
+│   ├── test_unit.py
+│   └── test_integration.py
+│
+├── docs/
+│   ├── INSTALLATION.md
+│   ├── USER_GUIDE.md
+│   ├── DATABASE_SCHEMA.md
+│   └── ARCHITECTURE.md
+│
+├── .vscode/
+│   ├── launch.json
+│   ├── settings.json
+│   └── extensions.json
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── pytest.ini
+└── README.md

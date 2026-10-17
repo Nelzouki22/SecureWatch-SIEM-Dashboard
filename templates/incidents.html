@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Incidents{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4>{{ t('incidents.title') }}</h4>
+  <a class="btn btn-primary btn-sm" href="{{ url_for('incidents.new_incident') }}">
+    <i class="bi bi-plus-lg"></i> {{ t('incidents.new') }}
+  </a>
+</div>
+<div class="card shadow-sm">
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>{{ t('incidents.id') }}</th><th>{{ t('incidents.title_col') }}</th>
+          <th>{{ t('events.severity') }}</th><th>{{ t('incidents.status') }}</th>
+          <th>{{ t('incidents.assigned') }}</th><th>{{ t('events.time') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in incidents %}
+        <tr>
+          <td><a href="{{ url_for('incidents.view_incident', iid=i.id) }}">{{ i.incident_id }}</a></td>
+          <td>{{ i.title }}</td>
+          <td>
+            <span class="badge bg-{{ 'dark' if i.severity == 'Critical' else 'danger' if i.severity == 'High' else 'warning' if i.severity == 'Medium' else 'secondary' }}">
+              {{ i.severity }}
+            </span>
+          </td>
+          <td>
+            <span class="badge bg-{{ 'success' if i.status == 'Resolved' or i.status == 'Closed' else 'primary' }}">
+              {{ i.status }}
+            </span>
+          </td>
+          <td>{{ i.assigned_to }}</td>
+          <td class="small">{{ i.created_at.strftime('%Y-%m-%d') }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="6" class="text-center text-muted py-4">{{ t('common.no_data') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "editor.formatOnSave": true,
+  "files.exclude": {"**/__pycache__": true, "**/*.pyc": true},
+  "emmet.includeLanguages": {"jinja-html": "html"},
+  "search.exclude": {"**/node_modules": true, "**/database": true}
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ 'rtl' if rtl else 'ltr' }}" data-theme="{{ theme }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SecureWatch SIEM{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/dark.css') }}" rel="stylesheet" id="dark-css">
+</head>
+<body class="{{ 'bg-dark text-light' if theme=='dark' else '' }}">
+<nav class="navbar navbar-expand-lg {{ 'navbar-dark bg-black' if theme=='dark' else 'navbar-dark bg-primary' }} shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="{{ url_for('dashboard.index') }}">
+      <i class="bi bi-shield-lock"></i> SecureWatch
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      {% if current_user.is_authenticated %}
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard.index') }}">{{ t('nav.dashboard') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('events.list_events') }}">{{ t('nav.events') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('alerts.list_alerts') }}">{{ t('nav.alerts') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('incidents.list_incidents') }}">{{ t('nav.incidents') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('reports.index') }}">{{ t('nav.reports') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('settings.audit_logs') }}">{{ t('nav.audit') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('settings.index') }}">{{ t('nav.settings') }}</a></li>
+      </ul>
+      <form class="d-flex gap-2 align-items-center" action="{{ url_for('dashboard.set_lang', lang='ar' if lang=='en' else 'en') }}" method="get">
+        <button class="btn btn-outline-light btn-sm" title="{{ t('lang.switch') }}">
+          <i class="bi bi-translate"></i> {{ lang|upper }}
+        </button>
+      </form>
+      <form class="d-flex" action="{{ url_for('dashboard.set_theme', theme='dark' if theme=='light' else 'light') }}" method="get">
+        <button class="btn btn-outline-light btn-sm" title="{{ t('theme.toggle') }}">
+          <i class="bi bi-{{ 'sun' if theme=='dark' else 'moon-stars' }}"></i>
+        </button>
+      </form>
+      <span class="navbar-text ms-2 text-white-50">
+        <i class="bi bi-person-circle"></i> {{ current_user.username }}
+      </span>
+      <a class="btn btn-sm btn-danger ms-2" href="{{ url_for('auth.logout') }}">{{ t('nav.logout') }}</a>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+<main class="container my-4">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for cat, msg in messages %}
+      <div class="alert alert-{{ cat }} alert-dismissible fade show">
+        {{ msg }}<button class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+    {% endfor %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</main>
+<footer class="text-center py-3 small {{ 'text-white-50' if theme=='dark' else 'text-muted' }}">
+  SecureWatch SIEM &copy; {{ current_year }} — Security Event Monitoring &amp; Incident Response Platform
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/darkmode.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

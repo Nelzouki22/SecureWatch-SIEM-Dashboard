@@ -1,0 +1,26 @@
+[
+    {
+        "incident_id": "INC-1001",
+        "title": "Brute Force Attack",
+        "severity": "High",
+        "status": "Open",
+        "assigned_to": "SOC Team",
+        "description": "Repeated failed login attempts detected."
+    },
+    {
+        "incident_id": "INC-1002",
+        "title": "Privilege Escalation",
+        "severity": "Critical",
+        "status": "Investigating",
+        "assigned_to": "Blue Team",
+        "description": "Suspicious privilege escalation activity."
+    },
+    {
+        "incident_id": "INC-1003",
+        "title": "Firewall Block Alert",
+        "severity": "Medium",
+        "status": "Resolved",
+        "assigned_to": "Security Analyst",
+        "description": "Inbound connection blocked by firewall."
+    }
+]

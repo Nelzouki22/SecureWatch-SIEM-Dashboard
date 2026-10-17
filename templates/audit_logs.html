@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Audit Logs{% endblock %}
+{% block content %}
+<h4>{{ t('audit.title') }}</h4>
+<form class="mb-3" method="get">
+  <select name="action" class="form-select form-select-sm d-inline w-auto">
+    <option value="">{{ t('audit.all_actions') }}</option>
+    {% for a in actions %}
+      <option {{ 'selected' if action == a }}>{{ a }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn btn-sm btn-outline-primary">{{ t('common.search') }}</button>
+</form>
+<div class="card shadow-sm">
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>{{ t('events.time') }}</th><th>{{ t('audit.user') }}</th>
+          <th>{{ t('audit.action') }}</th><th>{{ t('audit.detail') }}</th><th>IP</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for l in pagination.items %}
+        <tr>
+          <td class="small">{{ l.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+          <td>{{ l.username }}</td>
+          <td><span class="badge bg-info text-dark">{{ l.action }}</span></td>
+          <td class="small">{{ l.detail }}</td>
+          <td>{{ l.ip_address }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5" class="text-center text-muted py-4">{{ t('common.no_data') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

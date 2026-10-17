@@ -1,0 +1,377 @@
+[
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-10T08:15:22",
+        "Message": "An account was successfully logged on.\nAccount Name:\tnadir\nSource Network Address:\t192.168.1.10"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-10T09:22:11",
+        "Message": "An account was successfully logged on.\nAccount Name:\tjdoe\nSource Network Address:\t192.168.1.20"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:05:33",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:05:45",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:06:01",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:06:15",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:06:30",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:06:45",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-10T10:07:00",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-10T11:30:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tmsmith\nSource Network Address:\t192.168.1.35"
+    },
+    {
+        "EventID": 4634,
+        "TimeCreated": "2026-10-10T17:45:00",
+        "Message": "An account was logged off.\nAccount Name:\tnadir\nSource Network Address:\t192.168.1.10"
+    },
+    {
+        "EventID": 4720,
+        "TimeCreated": "2026-10-10T14:20:15",
+        "Message": "A user account was created.\nAccount Name:\tservice_account\nSource Network Address:\t127.0.0.1"
+    },
+    {
+        "EventID": 4672,
+        "TimeCreated": "2026-10-10T14:25:00",
+        "Message": "Special privileges assigned to new logon.\nAccount Name:\tguest\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4688,
+        "TimeCreated": "2026-10-10T15:10:30",
+        "Message": "A new process has been created.\nAccount Name:\tsystem\nSource Network Address:\tlocalhost"
+    },
+    {
+        "EventID": 4768,
+        "TimeCreated": "2026-10-10T16:45:22",
+        "Message": "Kerberos authentication ticket (TGT) request failed.\nAccount Name:\tadministrator\nSource Network Address:\t172.16.1.44"
+    },
+    {
+        "EventID": 5156,
+        "TimeCreated": "2026-10-10T12:30:10",
+        "Message": "The Windows Filtering Platform has allowed a connection.\nAccount Name:\t-\nSource Network Address:\t192.168.1.20"
+    },
+    {
+        "EventID": 5157,
+        "TimeCreated": "2026-10-10T13:15:44",
+        "Message": "The Windows Filtering Platform has blocked a connection.\nAccount Name:\t-\nSource Network Address:\t10.10.10.55"
+    },
+    {
+        "EventID": 9999,
+        "TimeCreated": "2026-10-10T18:55:09",
+        "Message": "Privilege escalation activity detected.\nAccount Name:\tguest\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-11T08:00:01",
+        "Message": "An account was successfully logged on.\nAccount Name:\tnadir\nSource Network Address:\t192.168.1.10"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-11T09:15:22",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-11T09:15:35",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-11T09:15:48",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-11T09:16:01",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-11T09:16:15",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-11T09:16:28",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-11T10:30:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tjdoe\nSource Network Address:\t192.168.1.20"
+    },
+    {
+        "EventID": 4688,
+        "TimeCreated": "2026-10-11T11:20:15",
+        "Message": "A new process has been created.\nAccount Name:\tsystem\nSource Network Address:\tlocalhost"
+    },
+    {
+        "EventID": 4720,
+        "TimeCreated": "2026-10-11T13:45:00",
+        "Message": "A user account was created.\nAccount Name:\tbackup_svc\nSource Network Address:\t127.0.0.1"
+    },
+    {
+        "EventID": 4672,
+        "TimeCreated": "2026-10-11T14:10:22",
+        "Message": "Special privileges assigned to new logon.\nAccount Name:\tdbadmin\nSource Network Address:\t192.168.1.44"
+    },
+    {
+        "EventID": 5157,
+        "TimeCreated": "2026-10-11T15:30:44",
+        "Message": "The Windows Filtering Platform has blocked a connection.\nAccount Name:\t-\nSource Network Address:\t91.240.118.3"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-12T08:05:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tmsmith\nSource Network Address:\t192.168.1.35"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-12T10:22:33",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-12T10:22:45",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-12T10:22:58",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4688,
+        "TimeCreated": "2026-10-12T11:45:00",
+        "Message": "A new process has been created.\nAccount Name:\tsystem\nSource Network Address:\tlocalhost"
+    },
+    {
+        "EventID": 4768,
+        "TimeCreated": "2026-10-12T14:20:15",
+        "Message": "Kerberos authentication ticket (TGT) request failed.\nAccount Name:\tadministrator\nSource Network Address:\t172.16.1.44"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-12T16:00:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tnadir\nSource Network Address:\t192.168.1.10"
+    },
+    {
+        "EventID": 5156,
+        "TimeCreated": "2026-10-12T17:30:00",
+        "Message": "The Windows Filtering Platform has allowed a connection.\nAccount Name:\t-\nSource Network Address:\t192.168.1.20"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-13T08:10:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tjdoe\nSource Network Address:\t192.168.1.20"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:45:22",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:45:35",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:45:48",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:46:01",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:46:15",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:46:28",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-13T09:46:41",
+        "Message": "An account failed to log on.\nAccount Name:\troot\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4688,
+        "TimeCreated": "2026-10-13T11:20:00",
+        "Message": "A new process has been created.\nAccount Name:\tsystem\nSource Network Address:\tlocalhost"
+    },
+    {
+        "EventID": 4720,
+        "TimeCreated": "2026-10-13T13:15:30",
+        "Message": "A user account was created.\nAccount Name:\ttemp_user\nSource Network Address:\t127.0.0.1"
+    },
+    {
+        "EventID": 4672,
+        "TimeCreated": "2026-10-13T14:30:00",
+        "Message": "Special privileges assigned to new logon.\nAccount Name:\tservice_account\nSource Network Address:\t192.168.1.44"
+    },
+    {
+        "EventID": 5157,
+        "TimeCreated": "2026-10-13T16:45:22",
+        "Message": "The Windows Filtering Platform has blocked a connection.\nAccount Name:\t-\nSource Network Address:\t45.155.205.11"
+    },
+    {
+        "EventID": 9999,
+        "TimeCreated": "2026-10-13T18:00:00",
+        "Message": "Privilege escalation activity detected.\nAccount Name:\tguest\nSource Network Address:\t203.10.5.88"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-14T08:00:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tnadir\nSource Network Address:\t192.168.1.10"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-14T09:30:15",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-14T09:30:28",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-14T09:30:41",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-14T09:30:55",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-14T09:31:08",
+        "Message": "An account failed to log on.\nAccount Name:\tadmin\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4688,
+        "TimeCreated": "2026-10-14T11:15:00",
+        "Message": "A new process has been created.\nAccount Name:\tsystem\nSource Network Address:\tlocalhost"
+    },
+    {
+        "EventID": 4768,
+        "TimeCreated": "2026-10-14T13:45:30",
+        "Message": "Kerberos authentication ticket (TGT) request failed.\nAccount Name:\tadministrator\nSource Network Address:\t172.16.1.44"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-14T15:20:00",
+        "Message": "An account was successfully logged on.\nAccount Name:\tmsmith\nSource Network Address:\t192.168.1.35"
+    },
+    {
+        "EventID": 5156,
+        "TimeCreated": "2026-10-14T16:30:00",
+        "Message": "The Windows Filtering Platform has allowed a connection.\nAccount Name:\t-\nSource Network Address:\t192.168.1.20"
+    },
+    {
+        "EventID": 5157,
+        "TimeCreated": "2026-10-14T17:45:22",
+        "Message": "The Windows Filtering Platform has blocked a connection.\nAccount Name:\t-\nSource Network Address:\t91.240.118.3"
+    },
+    {
+        "EventID": 4624,
+        "TimeCreated": "2026-10-15T08:00:01",
+        "Message": "An account was successfully logged on.\nAccount Name:\tnadir\nSource Network Address:\t192.168.1.10"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:01:01",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:01:15",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:01:28",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:01:40",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:01:55",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:02:10",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:02:25",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4625,
+        "TimeCreated": "2026-10-15T08:02:40",
+        "Message": "An account failed to log on.\nAccount Name:\tadministrator\nSource Network Address:\t185.201.55.44"
+    },
+    {
+        "EventID": 4720,
+        "TimeCreated": "2026-10-15T10:00:00",
+        "Message": "A user account was created.\nAccount Name:\tservice_account\nSource Network Address:\t127.0.0.1"
+    },
+    {
+        "EventID": 4688,
+        "TimeCreated": "2026-10-15T11:30:00",
+        "Message": "A new process has been created.\nAccount Name:\tsystem\nSource Network Address:\tlocalhost"
+    },
+    {
+        "EventID": 5157,
+        "TimeCreated": "2026-10-15T12:15:02",
+        "Message": "The Windows Filtering Platform has blocked a connection.\nAccount Name:\t-\nSource Network Address:\t10.10.10.10"
+    },
+    {
+        "EventID": 9999,
+        "TimeCreated": "2026-10-15T17:55:09",
+        "Message": "Privilege escalation activity detected.\nAccount Name:\tguest\nSource Network Address:\t203.10.5.88"
+    }
+]

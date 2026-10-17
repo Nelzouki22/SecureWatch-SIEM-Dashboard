@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h4>{{ t('incidents.new') }}</h4>
+<div class="card shadow-sm p-4">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="mb-3">
+      <label>{{ t('incidents.title_col') }}</label>
+      <input class="form-control" name="title" required>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label>{{ t('events.severity') }}</label>
+        <select class="form-select" name="severity">
+          {% for s in severities %}<option>{{ s }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label>{{ t('incidents.assigned') }}</label>
+        <input class="form-control" name="assigned_to">
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>{{ t('incidents.description') }}</label>
+      <textarea class="form-control" name="description" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+      <label>{{ t('incidents.notes') }}</label>
+      <textarea class="form-control" name="notes" rows="2"></textarea>
+    </div>
+    <button class="btn btn-primary">{{ t('common.save') }}</button>
+    <a class="btn btn-link" href="{{ url_for('incidents.list_incidents') }}">{{ t('common.cancel') }}</a>
+  </form>
+</div>
+{% endblock %}

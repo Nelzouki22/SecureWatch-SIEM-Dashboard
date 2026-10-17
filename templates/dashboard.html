@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - SecureWatch{% endblock %}
+{% block content %}
+<h4 class="mb-3">{{ t('dash.title') }}</h4>
+<div class="row g-3 mb-4">
+  {% set cards=[(t('dash.total_events'),total,'bi-list-check','primary'),
+                (t('dash.information'),by_sev['Information'],'bi-info-circle','info'),
+                (t('dash.warnings'),by_sev['Warning'],'bi-exclamation-triangle','warning'),
+                (t('dash.high'),by_sev['High'],'bi-fire','danger'),
+                (t('dash.critical'),by_sev['Critical'],'bi-skull','dark'),
+                (t('dash.failed_logins'),failed,'bi-x-octagon','secondary'),
+                (t('dash.alerts'),alerts,'bi-bell','warning'),
+                (t('dash.open_incidents'),open_inc,'bi-folder2-open','success')] %}
+  {% for label,val,icon,color in cards %}
+   <div class="col-6 col-md-3"><div class="card border-0 shadow-sm h-100">
+     <div class="card-body d-flex align-items-center justify-content-between">
+       <div><div class="fs-3 fw-bold text-{{ color }}">{{ val }}</div>
+       <div class="small text-muted">{{ label }}</div></div>
+       <i class="bi {{ icon }} fs-1 text-{{ color }} opacity-50"></i>
+     </div></div></div>
+  {% endfor %}
+</div>
+<div class="row g-3 mb-4">
+  <div class="col-md-3"><div class="card shadow-sm"><div class="card-body text-center">
+    <div id="score-gauge" style="width:140px;height:140px;margin:auto"></div>
+    <div class="fw-bold">{{ t('dash.security_score') }}: {{ score }}/100</div>
+  </div></div></div>
+  <div class="col-md-9"><div class="card shadow-sm"><div class="card-body">
+    <canvas id="sevChart" height="120"></canvas>
+  </div></div></div>
+</div>
+<div class="row g-3 mb-4">
+  <div class="col-md-7"><div class="card shadow-sm"><div class="card-body">
+    <h6>{{ t('dash.events_per_day') }}</h6><canvas id="dayChart" height="120"></canvas>
+  </div></div></div>
+  <div class="col-md-5"><div class="card shadow-sm"><div class="card-body">
+    <h6>{{ t('dash.top_ips') }}</h6><canvas id="ipChart" height="140"></canvas>
+  </div></div></div>
+</div>
+<div class="row g-3 mb-4">
+  <div class="col-md-5"><div class="card shadow-sm"><div class="card-body">
+    <h6>{{ t('dash.top_users') }}</h6><canvas id="userChart" height="140"></canvas>
+  </div></div></div>
+  <div class="col-md-4"><div class="card shadow-sm"><div class="card-body">
+    <h6>{{ t('dash.incident_status') }}</h6><canvas id="incChart" height="140"></canvas>
+  </div></div></div>
+  <div class="col-md-3"><div class="card shadow-sm"><div class="card-body">
+    <h6>{{ t('dash.severity_dist') }}</h6><canvas id="distChart" height="140"></canvas>
+  </div></div></div>
+</div>
+<script>window.SW_DATA={{ {
+  'severity': severity_dist, 'day': events_per_day, 'ips': top_ips, 'users': top_users,
+  'inc': inc_status, 'score': score }|tojson }};</script>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/charts.js') }}"></script>{% endblock %}

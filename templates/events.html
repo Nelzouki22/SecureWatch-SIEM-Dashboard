@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Events{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4>{{ t('events.title') }}</h4>
+  <a class="btn btn-primary btn-sm" href="{{ url_for('events.ingest') }}">
+    <i class="bi bi-upload"></i> {{ t('events.ingest') }}
+  </a>
+</div>
+<form class="row g-2 card p-3 mb-3 shadow-sm" method="get">
+  <div class="col-md-2">
+    <input class="form-control form-control-sm" name="username" placeholder="{{ t('events.user') }}" value="{{ filters.username }}">
+  </div>
+  <div class="col-md-2">
+    <input class="form-control form-control-sm" name="event_id" placeholder="Event ID" value="{{ filters.event_id }}">
+  </div>
+  <div class="col-md-2">
+    <select class="form-select form-select-sm" name="severity">
+      <option value="">{{ t('events.severity') }}</option>
+      {% for s in severities %}
+        <option value="{{ s }}" {{ 'selected' if filters.severity == s }}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-2">
+    <input class="form-control form-control-sm" name="source_ip" placeholder="Source IP" value="{{ filters.source_ip }}">
+  </div>
+  <div class="col-md-2">
+    <input type="date" class="form-control form-control-sm" name="date_from" value="{{ filters.date_from }}">
+  </div>
+  <div class="col-md-2">
+    <input type="date" class="form-control form-control-sm" name="date_to" value="{{ filters.date_to }}">
+  </div>
+  <div class="col-12">
+    <button class="btn btn-sm btn-outline-primary">{{ t('common.search') }}</button>
+    <a class="btn btn-sm btn-link" href="{{ url_for('events.list_events') }}">{{ t('common.reset') }}</a>
+  </div>
+</form>
+<div class="card shadow-sm">
+  <div class="table-responsive">
+    <table class="table table-hover mb-0">
+      <thead>
+        <tr>
+          <th>ID</th><th>{{ t('events.time') }}</th><th>{{ t('events.type') }}</th>
+          <th>{{ t('events.severity') }}</th><th>{{ t('events.user') }}</th>
+          <th>{{ t('events.ip') }}</th><th>{{ t('events.message') }}</th><th>{{ t('events.source') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in pagination.items %}
+        <tr>
+          <td>{{ e.event_id }}</td>
+          <td class="small">{{ e.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+          <td>{{ e.event_type }}</td>
+          <td>
+            <span class="badge bg-{{ 'dark' if e.severity == 'Critical' else 'danger' if e.severity == 'High' else 'warning' if e.severity == 'Medium' else 'secondary' }}">
+              {{ e.severity }}
+            </span>
+          </td>
+          <td>{{ e.username }}</td>
+          <td>{{ e.source_ip }}</td>
+          <td class="small text-muted">{{ e.message|truncate(40) }}</td>
+          <td><span class="badge bg-light text-dark">{{ e.log_source }}</span></td>
+        </tr>
+        {% else %}
+        <tr><td colspan="8" class="text-center text-muted py-4">{{ t('common.no_data') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

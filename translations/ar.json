@@ -1,0 +1,10 @@
+{
+  "nav": {"dashboard":"لوحة التحكم","events":"الأحداث","alerts":"التنبيهات","incidents":"الحوادث","reports":"التقارير","audit":"سجل التدقيق","settings":"الإعدادات","logout":"تسجيل الخروج"},
+  "dash": {"title":"لوحة عمليات الأمن","total_events":"إجمالي الأحداث","information":"معلوماتي","warnings":"تحذيرات","high":"عالي","critical":"حرج","failed_logins":"محاولات دخول فاشلة","alerts":"تنبيهات أمنية","open_incidents":"حوادث مفتوحة","security_score":"درجة الأمان","events_per_day":"الأحداث حسب اليوم","top_ips":"أعلى عناوين المصدر","top_users":"أعلى المستخدمين","incident_status":"توزيع حالة الحوادث","severity_dist":"توزيع الخطورة","recent_events":"أحدث الأحداث","recent_alerts":"أحدث التنبيهات"},
+  "events": {"title":"الأحداث الأمنية","ingest":"استيراد السجلات","time":"الوقت","type":"نوع الحدث","severity":"الخطورة","user":"المستخدم","ip":"عنوان المصدر","message":"الرسالة","source":"المصدر","upload_file":"ملف السجل (JSON / CSV)","import":"استيراد","samples":"ملفات سجل تجريبية"},
+  "alerts": {"title":"تنبيهات التهديدات","run_detection":"تشغيل الكشف","type":"نوع التنبيه","count":"العدد","status":"الحالة"},
+  "incidents": {"title":"إدارة الحوادث","new":"حادثة جديدة","id":"رقم الحادثة","title_col":"العنوان","status":"الحالة","assigned":"مُسند إلى","description":"الوصف","notes":"ملاحظات التحقيق","change_status":"تغيير الحالة","add_note":"إضافة ملاحظة تحقيق"},
+  "reports": {"title":"التقارير","desc":"إنشاء وتصدير التقارير الأمنية.","daily":"تقرير يومي","weekly":"تقرير أسبوعي","monthly":"تقرير شهري"},
+  "settings": {"title":"إعدادات المستخدم","theme":"المظهر","light":"فاتح","dark":"داكن","language":"اللغة","brute_threshold":"حد القوة الغاشمة","priv_threshold":"حد تصعيد الصلاحيات"},
+  "audit": {"title":"سجل التدقيق","user":"المستخدم","action":"الإجراء","detail":"التفاصيل","all_actions":"كل الإجراءات"}
+}

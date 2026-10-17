@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Ingest Logs{% endblock %}
+{% block content %}
+<h4>{{ t('events.ingest') }}</h4>
+<div class="card shadow-sm p-4 mb-3">
+  <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="mb-3">
+      <label class="form-label">{{ t('events.upload_file') }}</label>
+      <input class="form-control" type="file" name="logfile" accept=".json,.csv,.log,.txt" required>
+    </div>
+    <button class="btn btn-success"><i class="bi bi-cloud-download"></i> {{ t('events.import') }}</button>
+  </form>
+</div>
+<div class="card shadow-sm p-4">
+  <h6>{{ t('events.samples') }}</h6>
+  <div class="list-group">
+    {% for s in samples %}
+    <a class="list-group-item list-group-item-action" href="{{ url_for('events.ingest_sample', name=s) }}">
+      <i class="bi bi-filetype-json"></i> {{ s }}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

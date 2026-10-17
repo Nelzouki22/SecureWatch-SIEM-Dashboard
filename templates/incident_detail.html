@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<h4>{{ incident.incident_id }} — {{ incident.title }}</h4>
+<span class="badge bg-{{ 'dark' if incident.severity == 'Critical' else 'danger' if incident.severity == 'High' else 'warning' }}">
+  {{ incident.severity }}
+</span>
+<span class="badge bg-secondary">{{ incident.status }}</span>
+<p class="mt-2 text-muted">{{ incident.description }}</p>
+<div class="card shadow-sm p-3 mb-3">
+  <strong>{{ t('incidents.assigned') }}:</strong> {{ incident.assigned_to }}
+  <div class="mt-2">
+    <strong>{{ t('incidents.notes') }}:</strong>
+    <pre class="small mt-2 mb-0">{{ incident.notes or '-' }}</pre>
+  </div>
+</div>
+<div class="row g-3">
+  <div class="col-md-6">
+    <div class="card p-3">
+      <h6>{{ t('incidents.change_status') }}</h6>
+      <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="action" value="status">
+        <select name="status" class="form-select mb-2">
+          {% for s in statuses %}
+            <option {{ 'selected' if incident.status == s }}>{{ s }}</option>
+          {% endfor %}
+        </select>
+        <input class="form-control mb-2" name="note" placeholder="{{ t('incidents.note_ph') }}">
+        <button class="btn btn-sm btn-primary">{{ t('common.update') }}</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-3">
+      <h6>{{ t('incidents.add_note') }}</h6>
+      <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="action" value="note">
+        <textarea class="form-control mb-2" name="note" rows="2" required></textarea>
+        <button class="btn btn-sm btn-success">{{ t('common.add') }}</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Alerts{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4>{{ t('alerts.title') }}</h4>
+  <form method="post" action="{{ url_for('alerts.run_detection') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn btn-warning btn-sm"><i class="bi bi-radar"></i> {{ t('alerts.run_detection') }}</button>
+  </form>
+</div>
+<div class="card shadow-sm">
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>{{ t('alerts.type') }}</th><th>{{ t('events.severity') }}</th>
+          <th>{{ t('events.ip') }}</th><th>{{ t('events.user') }}</th>
+          <th>{{ t('alerts.count') }}</th><th>{{ t('alerts.status') }}</th><th>{{ t('common.action') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in alerts %}
+        <tr>
+          <td>
+            <strong>{{ a.title }}</strong>
+            <div class="small text-muted">{{ a.description|truncate(50) }}</div>
+          </td>
+          <td>
+            <span class="badge bg-{{ 'dark' if a.severity == 'Critical' else 'danger' if a.severity == 'High' else 'warning' if a.severity == 'Medium' else 'secondary' }}">
+              {{ a.severity }}
+            </span>
+          </td>
+          <td>{{ a.source_ip }}</td>
+          <td>{{ a.username }}</td>
+          <td>{{ a.count }}</td>
+          <td>{{ a.status }}</td>
+          <td>
+            <form method="post" action="{{ url_for('alerts.set_status', aid=a.id) }}">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <select name="status" class="form-select form-select-sm d-inline w-auto" onchange="this.form.submit()">
+                {% for st in statuses %}
+                  <option {{ 'selected' if a.status == st }}>{{ st }}</option>
+                {% endfor %}
+              </select>
+            </form>
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="7" class="text-center text-muted py-4">{{ t('common.no_data') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

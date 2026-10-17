@@ -1,0 +1,92 @@
+[
+    {
+        "event_id": 4624,
+        "timestamp": "2026-10-15T08:15:22",
+        "severity": "Information",
+        "event_type": "Login Success",
+        "username": "nadir",
+        "source_ip": "192.168.1.10",
+        "message": "Successful login."
+    },
+    {
+        "event_id": 4625,
+        "timestamp": "2026-10-15T08:17:33",
+        "severity": "Warning",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "185.201.55.44",
+        "message": "Failed login attempt."
+    },
+    {
+        "event_id": 4625,
+        "timestamp": "2026-10-15T08:18:11",
+        "severity": "Warning",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "185.201.55.44",
+        "message": "Failed login attempt."
+    },
+    {
+        "event_id": 4625,
+        "timestamp": "2026-10-15T08:19:04",
+        "severity": "High",
+        "event_type": "Brute Force Attempt",
+        "username": "admin",
+        "source_ip": "185.201.55.44",
+        "message": "Multiple failed login attempts detected."
+    },
+    {
+        "event_id": 4720,
+        "timestamp": "2026-10-15T10:10:15",
+        "severity": "Medium",
+        "event_type": "User Created",
+        "username": "service_account",
+        "source_ip": "127.0.0.1",
+        "message": "New account created."
+    },
+    {
+        "event_id": 4688,
+        "timestamp": "2026-10-15T11:25:00",
+        "severity": "Critical",
+        "event_type": "Suspicious Process",
+        "username": "system",
+        "source_ip": "localhost",
+        "message": "Unknown executable launched."
+    },
+    {
+        "event_id": 5156,
+        "timestamp": "2026-10-15T12:30:10",
+        "severity": "Information",
+        "event_type": "Firewall Allow",
+        "username": "-",
+        "source_ip": "192.168.1.20",
+        "message": "Firewall permitted outbound traffic."
+    },
+    {
+        "event_id": 5157,
+        "timestamp": "2026-10-15T13:15:44",
+        "severity": "Medium",
+        "event_type": "Firewall Block",
+        "username": "-",
+        "source_ip": "10.10.10.55",
+        "message": "Blocked inbound connection."
+    },
+    {
+        "event_id": 4768,
+        "timestamp": "2026-10-15T15:20:05",
+        "severity": "High",
+        "event_type": "Kerberos Failure",
+        "username": "administrator",
+        "source_ip": "172.16.1.44",
+        "message": "Kerberos authentication failure."
+    },
+    {
+        "event_id": 9999,
+        "timestamp": "2026-10-15T17:55:09",
+        "severity": "Critical",
+        "event_type": "Privilege Escalation",
+        "username": "guest",
+        "source_ip": "203.10.5.88",
+        "message": "Privilege escalation activity detected."
+    }
+]

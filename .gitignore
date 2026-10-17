@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+venv/
+.env
+database/*.db
+logs/*.log
+reports/*.pdf
+reports/*.csv
+instance/
+.pytest_cache/
+.vscode/.ropeproject

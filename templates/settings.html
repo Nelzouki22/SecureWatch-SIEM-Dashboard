@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Settings{% endblock %}
+{% block content %}
+<h4>{{ t('settings.title') }}</h4>
+<div class="card shadow-sm p-4">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label>{{ t('settings.theme') }}</label>
+        <select class="form-select" name="theme">
+          <option value="light" {{ 'selected' if settings.get('theme') == 'light' }}>{{ t('settings.light') }}</option>
+          <option value="dark" {{ 'selected' if settings.get('theme') == 'dark' }}>{{ t('settings.dark') }}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label>{{ t('settings.language') }}</label>
+        <select class="form-select" name="language">
+          <option value="en" {{ 'selected' if settings.get('language') == 'en' }}>English</option>
+          <option value="ar" {{ 'selected' if settings.get('language') == 'ar' }}>العربية</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label>{{ t('settings.brute_threshold') }}</label>
+        <input type="number" min="2" class="form-control" name="brute_force_threshold" value="{{ settings.get('brute_force_threshold','5') }}">
+      </div>
+      <div class="col-md-6">
+        <label>{{ t('settings.priv_threshold') }}</label>
+        <input type="number" min="1" class="form-control" name="priv_esc_threshold" value="{{ settings.get('priv_esc_threshold','3') }}">
+      </div>
+    </div>
+    <button class="btn btn-primary mt-3">{{ t('common.save') }}</button>
+  </form>
+</div>
+{% endblock %}

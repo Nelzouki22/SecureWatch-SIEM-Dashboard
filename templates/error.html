@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center mt-5">
+  <h1 class="display-4">{{ code }}</h1>
+  <p>{{ 'Page not found' if code == 404 else 'Internal server error' }}</p>
+  <a class="btn btn-primary" href="{{ url_for('dashboard.index') }}">{{ t('nav.dashboard') }}</a>
+</div>
+{% endblock %}

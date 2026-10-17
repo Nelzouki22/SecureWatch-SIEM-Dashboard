@@ -1,0 +1,37 @@
+html[data-theme="dark"] body, html[data-theme="dark"] {
+  background: #0b0f17 !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .list-group-item,
+html[data-theme="dark"] table {
+  background: #121826 !important;
+  color: #e6e9ef !important;
+  border-color: #1f2735 !important;
+}
+html[data-theme="dark"] .card-header,
+html[data-theme="dark"] .table {
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .table thead th {
+  color: #9aa4b2 !important;
+}
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select {
+  background: #0f1521 !important;
+  color: #e6e9ef !important;
+  border-color: #2a3446 !important;
+}
+html[data-theme="dark"] .text-muted {
+  color: #9aa4b2 !important;
+}
+html[data-theme="dark"] .bg-light {
+  background: #1f2735 !important;
+}
+html[data-theme="dark"] .alert-secondary {
+  background: #1f2735 !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] footer {
+  color: #9aa4b2 !important;
+}

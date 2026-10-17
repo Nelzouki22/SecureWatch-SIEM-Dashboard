@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "ms-python.vscode-pylance",
+        "whitewateridge.app-flask-snippets",
+        "bungcip.better-toml",
+        "eamodio.gitlens",
+        "humao.rest-client"
+    ]
+}

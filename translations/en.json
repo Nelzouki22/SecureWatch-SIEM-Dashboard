@@ -1,0 +1,10 @@
+{
+  "nav": {"dashboard":"Dashboard","events":"Events","alerts":"Alerts","incidents":"Incidents","reports":"Reports","audit":"Audit Logs","settings":"Settings","logout":"Logout"},
+  "dash": {"title":"Security Operations Dashboard","total_events":"Total Events","information":"Informational","warnings":"Warnings","high":"High","critical":"Critical","failed_logins":"Failed Logins","alerts":"Security Alerts","open_incidents":"Open Incidents","security_score":"Security Score","events_per_day":"Events Per Day","top_ips":"Top Source IPs","top_users":"Top Usernames","incident_status":"Incident Status Breakdown","severity_dist":"Severity Distribution","recent_events":"Recent Events","recent_alerts":"Recent Alerts"},
+  "events": {"title":"Security Events","ingest":"Ingest Logs","time":"Time","type":"Event Type","severity":"Severity","user":"Username","ip":"Source IP","message":"Message","source":"Source","upload_file":"Log file (JSON / CSV)","import":"Import","samples":"Sample log files"},
+  "alerts": {"title":"Threat Alerts","run_detection":"Run Detection","type":"Alert Type","count":"Count","status":"Status"},
+  "incidents": {"title":"Incident Management","new":"New Incident","id":"Incident ID","title_col":"Title","status":"Status","assigned":"Assigned To","description":"Description","notes":"Investigation Notes","change_status":"Change Status","add_note":"Add Investigation Note"},
+  "reports": {"title":"Reports","desc":"Generate and export security reports.","daily":"Daily Report","weekly":"Weekly Report","monthly":"Monthly Report"},
+  "settings": {"title":"User Settings","theme":"Theme","light":"Light","dark":"Dark","language":"Language","brute_threshold":"Brute Force Threshold","priv_threshold":"Privilege Escalation Threshold"},
+  "audit": {"title":"Audit Logs","user":"User","action":"Action","detail":"Detail","all_actions":"All Actions"}
+}
